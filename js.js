@@ -14,16 +14,16 @@
 // });
 
 
-// function mensaje(){
-//     console.log("mensaje");
-// }
+function mensaje(){
+    console.log("mensaje");
+}
 
 function boton(e){
     e.addEventListener('click', (e) => {        
         console.log(e.target);
     });
 
-    //mensaje();
+    mensaje();
 }
 
 boton(document.querySelector("#btn1"));
