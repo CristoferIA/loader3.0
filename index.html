@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #btn1 {
+            width: 101px;
+        }
+        .padre{
+            width: 200px;
+            min-height: 200px;;
+            padding: 0.1rem;
+            background-color: red;
+        }
+        .hijo{
+            width: 100px;
+            background-color: aqua;
+            padding: 1rem;
+        }
+        .nieto1{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .nieto2{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .nieto3{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+        }
+        .load{
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-family: Roboto;
+            position: relative;
+            
+        }
+        .load>div:nth-child(1){
+            width: 5rem;
+            height: 5rem;
+            border: 5px solid rgb(17, 95, 95);
+            border-top: 5px solid aqua;
+            border-radius: 50%;
+            animation: loader 0.8s linear infinite;
+            position: absolute;           
+        }
+        .load>div:nth-child(2){
+            color: aqua;
+            animation: loadertxt 1s infinite alternate-reverse ease;
+        }
+       
+
+        @keyframes loader{
+            0%{
+                transform: rotate(0deg);
+                
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes loadertxt{
+            0%{
+                font-size: 1rem;
+                
+            }
+            100%{
+                font-size: 1.5rem;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="load">
+        <div></div>
+        <div>IA</div>
+    </div>
+    <div class="container">
+
+        <button datadb="b1" id="btn1">boton 1</button>
+        <button datadb="b2" id="btn2">boton 2</button>
+        <button id="btn3">boton 3</button>
+        <button id="btn4">boton 4</button>
+
+    </div>
+
+    <div class="padre">
+        <div class="hijo" >
+            <div datasrc="www.google.com" class="nieto1" >nieto1</div>
+            <div class="nieto2" >nieto2</div>
+            <div class="nieto3" >nieto3</div>
+        </div>
+    </div>
+
+    <br><br> 
+
+
+    <button id="agregar" class="boton">agregar hijo</button>
+
+    <img src="https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg" alt="">
+</body>
+
+</html>
+
+<script src="js.js"></script>
